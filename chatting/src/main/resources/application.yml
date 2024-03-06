@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3307/chatting?allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: 1234
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  logging:
+    level:
+      org:
+        hibernate:
+          type:
+            description:
+              sql: trace
+  output:
+    ansi:
+      enabled: ALWAYS
+
+jwt:
+  secret-key: 92e5f1de1474153f62374b1fd8c714a38f8751f7c158c28b4e56b5de91b207ac
